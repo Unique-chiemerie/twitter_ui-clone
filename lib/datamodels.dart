@@ -15,23 +15,23 @@ class UserPost {
 
 List<UserPost> tweet = [
   UserPost(
-    'anonymous nigs',
-    Image.network(
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYgSPoWchrYkoO3fpX1i4-BcWgSGheBlgLA&usqp=CAU'),
-    'damn look at this',
-    '@saitama',
-    Image.asset('pics/verify.png'),
-    '1h',
-    Image.asset(''),
-  ),
+      'anonymous nigs',
+      Image.network(
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYgSPoWchrYkoO3fpX1i4-BcWgSGheBlgLA&usqp=CAU'),
+      'shit',
+      '@saitama',
+      Image.asset('pics/verify.png'),
+      '1h',
+      Image.asset('pics/man.png')),
   UserPost(
       'some guy',
       Image.network(
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYgSPoWchrYkoO3fpX1i4-BcWgSGheBlgLA&usqp=CAU'),
-      'damn look at this',
+      'bro said whtf',
       '@shigeo',
       Image.asset('pics/verify.png'),
-      '6h'),
+      '6h',
+      Image.asset('pics/man.png')),
   UserPost(
       'doctor who',
       Image.network(
@@ -39,13 +39,16 @@ List<UserPost> tweet = [
       'wait is this legal',
       '@xingchao',
       Image.asset('pics/verify.png'),
-      '1h'),
+      '1h',
+      Image.asset('pics/man.png')),
   UserPost(
-      'mr.Princeton',
-      Image.network(
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYgSPoWchrYkoO3fpX1i4-BcWgSGheBlgLA&usqp=CAU'),
-      'i should get my wife some of this',
-      '@daddy123',
-      Image.asset('pics/verify.png'),
-      '5h'),
+    'mr.Princeton',
+    Image.network(
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYgSPoWchrYkoO3fpX1i4-BcWgSGheBlgLA&usqp=CAU'),
+    'i should get my wife some of this',
+    '@daddy123',
+    Image.asset('pics/verify.png'),
+    '5h',
+    Image.asset('pics/man.png'),
+  ),
 ];

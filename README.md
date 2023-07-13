@@ -1,10 +1,12 @@
 # twitter_ui_clone
 
-A new Flutter project.
+i decided to make  UI  clone of twitter , it can switch between screens but it have the other functions tho
 
-## Getting Started
+## Time taken
 
-This project is a starting point for a Flutter application.
+i can't place a specific time frame yet , but this would'nt take more than 2 days to finish
+
+## wish to get into flutter ?
 
 A few resources to get you started if this is your first Flutter project:
 
