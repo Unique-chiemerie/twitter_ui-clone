@@ -149,14 +149,7 @@ class foryouScreen extends StatelessWidget {
                           icon: const Icon(Icons.mode_comment_outlined),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.mode_comment_outlined),
-                        ),
-                      ),
+                      const SizedBox(),
                       SizedBox(
                         height: 20,
                         width: 20,
@@ -169,6 +162,22 @@ class foryouScreen extends StatelessWidget {
                         height: 20,
                         width: 20,
                         child: Image.asset('pics/like.png'),
+                      ),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.bar_chart),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.share),
+                        ),
                       ),
                     ],
                   ),
