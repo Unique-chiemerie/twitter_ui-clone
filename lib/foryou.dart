@@ -9,12 +9,12 @@ class foryouScreen extends StatelessWidget {
     return ListView.builder(
       itemCount: tweet.length,
       itemBuilder: (context, index) => Container(
-        height: 350,
+        height: 410,
         width: 350,
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
           color: Colors.green,
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
           children: [
@@ -32,12 +32,11 @@ class foryouScreen extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: const Color.fromARGB(255, 43, 42, 42),
                         ),
-                        child: tweet[index],
+                        child: tweet[index].dp,
                       ),
                       const SizedBox(
-                        width: 30,
+                        width: 10,
                       ),
                       Container(
                         margin: const EdgeInsets.all(0.5),
@@ -45,7 +44,62 @@ class foryouScreen extends StatelessWidget {
                         width: 200,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: const Color.fromARGB(255, 43, 42, 42),
+                        ), //this is where the user see's thier dp and the nonsense they tweeted
+                        //it is written under a column to make arrangements for the main tweet and thier dp ,time and
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            //make a row to show verification and alat
+                            Row(
+                              children: [
+                                Text(
+                                  tweet[index].username,
+                                  style: const TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  width: 0.5,
+                                ),
+                                Container(
+                                    height: 15,
+                                    width: 15,
+                                    child: tweet[index].Verified),
+                                const SizedBox(
+                                  width: 1,
+                                ),
+                                Text(
+                                  tweet[index].handle,
+                                  style: const TextStyle(
+                                      fontSize: 10, color: Colors.grey),
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  '.',
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  tweet[index].time,
+                                  style: const TextStyle(
+                                      fontSize: 10, color: Colors.grey),
+                                ),
+                              ],
+                            ),
+//this is most likely going to hold the shit the user inputs
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              tweet[index].usertext,
+                              style: const TextStyle(fontSize: 10),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(
@@ -67,11 +121,24 @@ class foryouScreen extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 43, 42, 42),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   height: 270,
                   width: 300,
+                  child: tweet[index].post,
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 70,
+                ),
+                Container(
+                  height: 50,
+                  width: 290,
+                  margin: const EdgeInsets.all(10),
+                  color: Colors.red,
                 ),
               ],
             ),
