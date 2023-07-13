@@ -141,25 +141,35 @@ class foryouScreen extends StatelessWidget {
                   color: Colors.red,
                   child: Row(
                     children: [
-                      SizedBox(height: 20,width: 20,
+                      SizedBox(
+                        height: 20,
+                        width: 20,
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.mode_comment_outlined),
                         ),
                       ),
-                         SizedBox(height: 20,width: 20,
+                      SizedBox(
+                        height: 20,
+                        width: 20,
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.mode_comment_outlined),
                         ),
                       ),
-                         SizedBox(height: 20,width: 20,
+                      SizedBox(
+                        height: 20,
+                        width: 20,
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.redo),
                         ),
                       ),
-                      
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: Image.asset('pics/like.png'),
+                      ),
                     ],
                   ),
                 ),
