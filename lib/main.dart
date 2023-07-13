@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'foryou.dart';
+import 'following.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: mainScreen(),
+    home: const mainScreen(),
+    theme: ThemeData(
+      colorScheme: const ColorScheme.dark(
+        background: Color.fromARGB(255, 35, 33, 33),
+      ),
+    ),
   ));
 }
 
@@ -32,40 +39,59 @@ class _mainScreenState extends State<mainScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 35, 33, 33),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 35, 33, 33),
         actions: [
-          Container(
-            height: 40,
-            width: 40,
-            color: Colors.blue,
+          Center(
+            child: Container(
+              height: 30,
+              width: 30,
+              decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
+                  color: Colors.blue),
+              child: Image.asset('pics/dp.png'),
+            ),
+          ),
+          const SizedBox(
+            width: 135,
+          ),
+          Center(
+            child: Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.asset('pics/bird.png'),
+            ),
+          ),
+          const SizedBox(
+            width: 175,
           ),
         ],
       ),
       body: Column(
         children: [
           TabBar(
+            indicatorColor: Colors.blue,
+            indicatorSize: TabBarIndicatorSize.label,
             controller: _tabController,
             tabs: const [
-              Tab(text: 'For you'),
-              Tab(text: 'For you'),
+              Tab(
+                text: 'For you',
+              ),
+              Tab(text: 'Following'),
             ],
           ),
           Expanded(
             child: TabBarView(
               controller: _tabController,
               children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  margin: const EdgeInsets.all(100),
-                  color: Colors.green,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  margin: const EdgeInsets.all(100),
-                  color: Colors.green,
-                ),
+                foryouScreen(),
+                followingScreen(),
               ],
             ),
           ),
