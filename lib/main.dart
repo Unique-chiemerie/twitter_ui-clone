@@ -97,6 +97,52 @@ class _mainScreenState extends State<mainScreen>
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.blue,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Icon(
+              Icons.mic_none_rounded,
+              color: Colors.white,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Icon(
+              Icons.notifications_none,
+              color: Colors.white,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Icon(
+              Icons.mail_outline_outlined,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

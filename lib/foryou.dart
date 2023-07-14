@@ -1,8 +1,29 @@
 import 'package:flutter/material.dart';
 import 'datamodels.dart';
 
-class foryouScreen extends StatelessWidget {
+class foryouScreen extends StatefulWidget {
   const foryouScreen({super.key});
+
+  @override
+  State<foryouScreen> createState() => _foryouScreenState();
+}
+
+class _foryouScreenState extends State<foryouScreen> {
+  void like(index) {
+    final bar = SnackBar(
+      action: SnackBarAction(
+          label: 'okay',
+          onPressed: () {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          }),
+      content: Text(
+        'you liked a post from ${tweet[index].username}',
+        style: const TextStyle(color: Colors.white),
+      ),
+      backgroundColor: Color.fromARGB(255, 58, 63, 78),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(bar);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +34,6 @@ class foryouScreen extends StatelessWidget {
         width: 350,
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.green,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
@@ -137,8 +157,6 @@ class foryouScreen extends StatelessWidget {
                 Container(
                   height: 50,
                   width: 290,
-                  margin: const EdgeInsets.all(10),
-                  color: Colors.red,
                   child: Row(
                     children: [
                       SizedBox(
@@ -146,37 +164,69 @@ class foryouScreen extends StatelessWidget {
                         width: 20,
                         child: IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.mode_comment_outlined),
+                          icon: const Icon(
+                            Icons.mode_comment_outlined,
+                            color: Colors.grey,
+                          ),
                         ),
                       ),
-                      const SizedBox(),
-                      SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.redo),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: Image.asset('pics/like.png'),
+                      const SizedBox(
+                        width: 45,
                       ),
                       SizedBox(
                         height: 20,
                         width: 20,
                         child: IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.bar_chart),
+                          icon: const Icon(
+                            Icons.redo,
+                            color: Colors.grey,
+                          ),
                         ),
+                      ),
+                      const SizedBox(
+                        width: 50,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          like(index);
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.only(top: 20),
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                            'pics/like.png',
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 45,
                       ),
                       SizedBox(
                         height: 20,
                         width: 20,
                         child: IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.share),
+                          icon: const Icon(
+                            Icons.bar_chart,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 45,
+                      ),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.share_outlined,
+                            color: Colors.grey,
+                          ),
                         ),
                       ),
                     ],
