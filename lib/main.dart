@@ -39,9 +39,9 @@ class _mainScreenState extends State<mainScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 35, 33, 33),
+      backgroundColor: const Color.fromARGB(255, 35, 33, 33),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 35, 33, 33),
+        backgroundColor: const Color.fromARGB(255, 35, 33, 33),
         actions: [
           Center(
             child: Container(
@@ -89,7 +89,7 @@ class _mainScreenState extends State<mainScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: [
+              children: const [
                 foryouScreen(),
                 followingScreen(),
               ],

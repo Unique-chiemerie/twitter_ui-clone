@@ -20,7 +20,7 @@ class _foryouScreenState extends State<foryouScreen> {
         'you liked a post from ${tweet[index].username}',
         style: const TextStyle(color: Colors.white),
       ),
-      backgroundColor: Color.fromARGB(255, 58, 63, 78),
+      backgroundColor: const Color.fromARGB(255, 58, 63, 78),
     );
     ScaffoldMessenger.of(context).showSnackBar(bar);
   }
@@ -81,7 +81,7 @@ class _foryouScreenState extends State<foryouScreen> {
                                 const SizedBox(
                                   width: 0.5,
                                 ),
-                                Container(
+                                SizedBox(
                                     height: 15,
                                     width: 15,
                                     child: tweet[index].Verified),
@@ -154,7 +154,7 @@ class _foryouScreenState extends State<foryouScreen> {
                 const SizedBox(
                   width: 70,
                 ),
-                Container(
+                SizedBox(
                   height: 50,
                   width: 290,
                   child: Row(
