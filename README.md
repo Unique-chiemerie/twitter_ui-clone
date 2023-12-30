@@ -1,10 +1,9 @@
 # twitter_ui_clone
 
-i decided to make  UI  clone of twitter , it can switch between screens but it have the other functions tho
+i decided to make  UI  clone of twitter , it can switch between screens but it is not functional tho
 
 ## Time taken
-
-i can't place a specific time frame yet , but this would'nt take more than 2 days to finish
+12 hours
 
 ## wish to get into flutter ?
 
